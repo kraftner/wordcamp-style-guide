@@ -18,7 +18,7 @@
   background-size: fixed;
   background-image: $site-hero-path-small;
 
-  @include breakpoint(medium) {
+  @include breakpoint(small) {
 
     background-image: $site-hero-path-large;
     background-position: 50% 50%;
@@ -27,6 +27,8 @@
   }
 
   @include transition-fast();
+
+  /*
 
   &:before {
 
@@ -41,6 +43,8 @@
     content: "";
 
   }
+
+  */
 
   > * {
 
