@@ -126,6 +126,8 @@
 
   }
 
+  background-color: rgba( #fff, 0.9);
+
   @include breakpoint(to-small) {
 
     background-color: $color-brand-tertiary;
