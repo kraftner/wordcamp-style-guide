@@ -4,7 +4,7 @@
  # Readme.md #
 
 ## CampSite 2017 theme and a style guide 
-[WordCamp Europe 2017](https://2017.europe.wordcamp.org/) design team ported the [Underscores](https://underscores.me/) theme and made it available for [all WordCamps](https://make.wordpress.org/community/2017/05/08/the-new-wordcamp-base-theme-campsite-2017/) as a base theme. The theme was improved with additional [widget areas](https://lucijanblagonic.github.io/wceu-2018/styleguide/section-6.html#kssref-6-widget-areas) and a “Day of” template —based on the feedback received from the WordPress community.
+[WordCamp Europe 2017](https://2017.europe.wordcamp.org/) design team ported the [Underscores](https://underscores.me/) theme and made it available for [all WordCamps](https://make.wordpress.org/community/2017/05/08/the-new-wordcamp-base-theme-campsite-2017/) as a base theme. The theme was improved with additional [widget areas](https://kraftner.github.io/wceu-2018/styleguide/section-6.html#kssref-6-widget-areas) and a “Day of” template —based on the feedback received from the WordPress community.
 
 ## Why use the style guide 
 
@@ -44,14 +44,14 @@ If you want to build the style guide once, without the browser-sync live preview
 
 **These videos are recorded on virtual Windows 7 machine (where no development has ever been done and no dev tools are installed). [GIT Bash](https://git-scm.com/downloads) is used because that’s the only CLI tool for Windows that’s close enough to Linux terminal.**
 
-Repository: https://github.com/lucijanblagonic/wordcamp-style-guide
+Repository: https://github.com/kraftner/wordcamp-style-guide
 
 ### Local setup
 
 1. **Clone repository** - [Video](https://drive.google.com/file/d/1hYB9cBHam6UaujkZzuouc48d94iLelTZ/view)
 
 You can select any folder you wish and clone github repository into it. For some reason I couldn’t use https but http works just fine. Command from video:
-*git clone [http://github.com/lucijanblagonic/wordcamp-style-guide.git](http://github.com/lucijanblagonic/wordcamp-style-guide.git)* 
+*git clone [http://github.com/kraftner/wordcamp-style-guide.git](http://github.com/kraftner/wordcamp-style-guide.git)* 
 
 2. **Install node.js (npm comes in package)** - [video](https://drive.google.com/file/d/1gv_iR5TqLuTLT6uETNJckxQ5CetfGSOJ/view)
 3. **Install node modules** - [video](https://drive.google.com/file/d/1ee3axBDh_2TVdzt71kvw-eQhH_JMsDxf/view)
@@ -69,7 +69,7 @@ At the end of video, local server will open IE (because that was still default b
 
 Running *gulp build* will just re-build files from **source** directory to **styleguide** directory
 
-Running *gulp* will rebuild files and additionally run local server (it will open styleguide in your default browser) and you’ll be able to see your own local version in browser (along with changes you made to it). It should look like this -[https://lucijanblagonic.github.io/wordcamp-style-guide/styleguide/]( https://lucijanblagonic.github.io/wordcamp-style-guide/styleguide/)
+Running *gulp* will rebuild files and additionally run local server (it will open styleguide in your default browser) and you’ll be able to see your own local version in browser (along with changes you made to it). It should look like this -[https://kraftner.github.io/wordcamp-style-guide/styleguide/]( https://kraftner.github.io/wordcamp-style-guide/styleguide/)
 
 ## Connecting style guide 
 
@@ -83,7 +83,7 @@ If you are hosting your style guide repository on GitHub, you can use the power 
 * Go to your repository **settings** on GitHub and find **Hooks**.
 * Paste the hook URL: **year.wordcamp-name**.wordcamp.org/wp-admin/admin-ajax.php?action=wcrcss_webhook
 * Go to your WordCamp admin and find **Remote CSS** **under Appearance**.
-* Paste the link to your compiled CSS on GitHub. Example: [https://raw.githubusercontent.com/lucijanblagonic/wordcamp-style-guide/master/build/assets/stylesheets/style.css](https://raw.githubusercontent.com/lucijanblagonic/wordcamp-style-guide/master/build/assets/stylesheets/style.css)
+* Paste the link to your compiled CSS on GitHub. Example: [https://raw.githubusercontent.com/kraftner/wordcamp-style-guide/master/build/assets/stylesheets/style.css](https://raw.githubusercontent.com/kraftner/wordcamp-style-guide/master/build/assets/stylesheets/style.css)
 
 If you need more help, check the Help screen on Remote CSS page on your WordCamp website admin.
 
