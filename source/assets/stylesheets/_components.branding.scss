@@ -19,24 +19,31 @@
 
 .site-header {
 
-  background-color: $color-brand-tertiary;
+  background-color: #fff;
+
+  background: 0 0                                                          / #{$site-hero-pattern-width} #{$site-hero-pattern-height} #{$site-hero-pattern},
+              #{$site-hero-pattern-width/2} #{$site-hero-pattern-height/2} / #{$site-hero-pattern-width} #{$site-hero-pattern-height} #{$site-hero-pattern};
 
 }
 
 .site-header .site-branding {
 
-  text-shadow: 0 0 10px $color-brand-primary;
+  background-color: #fff;
+
+  width: 440px;
+  max-width: 100%;
+  margin: 0 auto;
 
   position: relative; // Add position: relative to keep the light beams from leaking out
   overflow: hidden; // Add overflow: hidden to keep light beams from leaking out
 
-  @include container-padding(1.5);
+  @include container-padding(1);
 
   text-align: center;
 
   .home & {
 
-    @include container-padding(3.5);
+    @include container-padding(1);
 
   }
 
@@ -46,22 +53,31 @@
 
   margin: 0;
 
-  font-size: ms(3);
-  line-height: 1;
+  font-size: ms(4);
+  line-height: ms(1);
   font-family: $font-headline;
-  font-weight: $bold;
-  color: $color-text-strong-invert;
+  font-weight: $regular;
+  text-transform: uppercase;
+  color: $color-brand-primary;
+
+  text-align: justify;
+  text-align-last: justify;
+  text-justify: distribute;
 
   a {
 
     display: block;
-    color: $color-text-strong-invert;
+    color: $color-brand-primary;
+
+    border: solid 3px $color-brand-primary;
+
+    padding: 0 10px 10px;
 
     &:hover,
     &:focus,
     &:active {
 
-      color: $color-text-strong-invert;
+      color: $color-brand-primary;
       text-decoration: none;
 
     }
@@ -71,16 +87,20 @@
   a:before {
 
     display: block;
-    width: ($site-logo-width * $site-logo-proportion);
-    height: ($site-logo-height * $site-logo-proportion);
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: $unit-s;
+    width: 100%;
+    width: calc(100% + 20px);
+    padding-top: 100%;
+
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: 10px;
+
+    border-bottom: solid 3px $color-brand-primary;
 
     background-repeat: no-repeat;
-    background-position: 50% 50%;
+    background-position: 50% 35%;
     background-image: $site-logo-path;
-    background-size: 100%;
+    background-size: $site-logo-width * $site-logo-proportion $site-logo-height * $site-logo-proportion;
 
     content: "";
 
@@ -93,13 +113,16 @@
 .site-description {
 
   margin: 0;
-  margin-top: $unit-xs;
 
-  font-size: ms(1);
+  border: solid 3px $color-brand-primary;
+  border-top: 0;
+
+  padding: 10px;
+
+  font-size: ms(3);
   line-height: ms(2);
   font-family: $font-headline;
   font-weight: $regular;
-  text-transform: none;
-  color: $color-text-strong-invert;
+  color: $color-brand-primary;
 
 }

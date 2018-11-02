@@ -112,21 +112,10 @@
 
   position: relative;
 
-  &:before {
+  background-color: #fff;
 
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-
-    height: rem(2);
-    background-color: $color-link;
-
-    content: "";
-
-  }
-
-  background-color: rgba( #fff, 0.9);
+  border-top: solid 3px $color-brand-primary;
+  border-bottom: solid 3px $color-brand-primary;
 
   @include breakpoint(to-small) {
 

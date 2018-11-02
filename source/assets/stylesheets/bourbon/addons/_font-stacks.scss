@@ -31,10 +31,23 @@ $monospace: "Bitstream Vera Sans Mono", "Consolas", "Courier", monospace;
 $verdana: "Verdana", "Geneva", sans-serif;
 
 
-// Font Imports are stripped by wordcamp.org so make sure to add them again with the Font Tool:
-// https://2019.vienna.wordcamp.org/wp-admin/themes.php?page=wc-fonts-options
+/// Lato font stack.
+///
+/// Font Imports are stripped by wordcamp.org so make sure to add them again with the Font Tool:
+/// https://2019.vienna.wordcamp.org/wp-admin/themes.php?page=wc-fonts-options
+///
+/// @type List
+//
+//
 @import url('https://fonts.googleapis.com/css?family=Lato:400,900');
-$lato: 'Lato', sans-serif;
+$lato: "Lato", sans-serif;
+
+/// Poiret One font stack.
+///
+/// Font Imports are stripped by wordcamp.org so make sure to add them again with the Font Tool:
+/// https://2019.vienna.wordcamp.org/wp-admin/themes.php?page=wc-fonts-options
+///
+/// @type List
 
 @import url('https://fonts.googleapis.com/css?family=Poiret+One');
-$poiret: 'Poiret One', cursive;
+$poiret: "Poiret One", sans-serif;
