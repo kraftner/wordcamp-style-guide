@@ -1,6 +1,6 @@
-# WordCamp Vienna 2018
+# WordCamp Vienna 2019
 
-Style guide for the WordCamp Vienna 2018 theme
+Style guide for the WordCamp Vienna 2019 theme
 
 ## Style guide
 
