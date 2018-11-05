@@ -17,11 +17,17 @@
  * <header id="masthead" class="site-header" role="banner"> ... </header>
  */
 
+$border-width: 4px;
+$line-gap: 6px;
+$ruler-height: 2 * $border-width + $line-gap;
+
+$font-size: 40px;
+
 .site-header {
 
   background-color: #fff;
 
-  background: 0 0                                                          / 100% 100% linear-gradient(to bottom, $color-brand-primary $site-hero-pattern-height, transparent 0),
+  background: 0 0                                                          / 100% 100% linear-gradient(to bottom, $color-brand-primary #{$site-hero-pattern-height*1.5}, transparent 0),
               0 0                                                          / #{$site-hero-pattern-width} #{$site-hero-pattern-height} #{$site-hero-pattern},
               #{$site-hero-pattern-width/2} #{$site-hero-pattern-height/2} / #{$site-hero-pattern-width} #{$site-hero-pattern-height} #{$site-hero-pattern};
 
@@ -31,7 +37,10 @@
 
   background-color: #fff;
 
-  width: 340px;
+  border: solid $border-width $color-brand-primary;
+  border-bottom: 0;
+
+  width: 400px;
   max-width: 100%;
   margin: 0 auto;
 
@@ -49,27 +58,21 @@
 
 .site-title {
 
-  margin: 0;
+  margin: 0 0 $line-gap;
 
-  font-size: ms(4);
-  line-height: ms(1);
+  border-bottom: solid $border-width $color-brand-primary;
+
+  font-size: $font-size;
+  line-height: $font-size + 2 * $line-gap;
   font-family: $font-headline;
   font-weight: $regular;
   text-transform: uppercase;
   color: $color-brand-primary;
 
-  text-align: justify;
-  text-align-last: justify;
-  text-justify: distribute;
-
   a {
 
     display: block;
     color: $color-brand-primary;
-
-    border: solid 3px $color-brand-primary;
-
-    padding: 0 10px 10px;
 
     &:hover,
     &:focus,
@@ -86,17 +89,12 @@
 
     display: block;
     width: 100%;
-    width: calc(100% + 20px);
-    padding-top: 100%;
+    padding-top: 80%;
 
-    margin-left: -10px;
-    margin-right: -10px;
-    margin-bottom: 10px;
-
-    border-bottom: solid 3px $color-brand-primary;
+    border-bottom: solid $border-width $color-brand-primary;
 
     background-repeat: no-repeat;
-    background-position: 50% 35%;
+    background-position: 50% 50%;
     background-image: $site-logo-path;
     background-size: $site-logo-width * $site-logo-proportion $site-logo-height * $site-logo-proportion;
 
@@ -110,17 +108,16 @@
 
 .site-description {
 
-  margin: 0;
+  position: relative;
 
-  border: solid 3px $color-brand-primary;
-  border-top: 0;
+  margin: #{$ruler-height/-4} 0 #{$ruler-height/4};
+  background: 0 #{$ruler-height/-2} / 100% ($font-size + 4 * $line-gap) linear-gradient(to bottom, $color-brand-primary $border-width, transparent $border-width, transparent ($border-width+$line-gap), $color-brand-primary ($border-width+$line-gap),$color-brand-primary $ruler-height,transparent $ruler-height);
 
-  padding: 10px;
-
-  font-size: ms(3);
-  line-height: ms(2);
+  font-size: $font-size;
+  line-height: $font-size + 4 * $line-gap;
   font-family: $font-headline;
   font-weight: $regular;
   color: $color-brand-primary;
 
+  font-variant: small-caps;
 }
