@@ -21,7 +21,8 @@
 
   background-color: #fff;
 
-  background: 0 0                                                          / #{$site-hero-pattern-width} #{$site-hero-pattern-height} #{$site-hero-pattern},
+  background: 0 0                                                          / 100% 100% linear-gradient(to bottom, $color-brand-primary $site-hero-pattern-height, transparent 0),
+              0 0                                                          / #{$site-hero-pattern-width} #{$site-hero-pattern-height} #{$site-hero-pattern},
               #{$site-hero-pattern-width/2} #{$site-hero-pattern-height/2} / #{$site-hero-pattern-width} #{$site-hero-pattern-height} #{$site-hero-pattern};
 
 }
@@ -30,20 +31,17 @@
 
   background-color: #fff;
 
-  width: 440px;
+  width: 340px;
   max-width: 100%;
   margin: 0 auto;
 
   position: relative; // Add position: relative to keep the light beams from leaking out
   overflow: hidden; // Add overflow: hidden to keep light beams from leaking out
 
-  @include container-padding(1);
 
   text-align: center;
 
   .home & {
-
-    @include container-padding(1);
 
   }
 
