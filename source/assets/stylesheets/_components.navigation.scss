@@ -20,7 +20,6 @@
   padding: $unit-s $unit-s;
   margin: 0;
 
-  margin-top: rem(2);
   width: 100%;
 
   // font-size: ms(0);
@@ -30,10 +29,10 @@
   font-weight: $bold;
   text-align: center;
   letter-spacing: .05em;
-  color: $color-link;
+  color: #fff;
 
   border-radius: 0;
-  background-color: rgba($color-brand-tertiary, .9);
+  background-color: $color-brand-primary;
 
   cursor: pointer;
 
@@ -42,8 +41,8 @@
   &:focus,
   &.focus {
 
-    color: $color-link-hover;
-    background-color: rgba($color-brand-tertiary, .9);
+    color: #fff;
+    background-color: $color-brand-primary;
 
   }
 
@@ -71,7 +70,7 @@
 
     vertical-align: middle;
 
-    border-top-color: $color-link;
+    border-top-color: #fff;
 
     content: "";
 
@@ -79,12 +78,10 @@
 
   &[aria-expanded="true"] {
 
-    color: $color-link;
-
     &:after {
 
       border-top-color: transparent;
-      border-bottom-color: $color-link;
+      border-bottom-color: #fff;
 
     }
 
@@ -106,22 +103,48 @@
  */
 
 
-// .menu-main-navigation-container {}
+.menu-main-navigation-container {
+
+  max-width: $container-max-width;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: $color-brand-primary;
+
+  .menu {
+
+    @include breakpoint(small) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+  }
+
+}
 
 .main-navigation {
 
   position: relative;
 
-  background-color: #fff;
+  @include container-padding(1.5);
 
-  border-top: solid 3px $color-brand-primary;
-  border-bottom: solid 3px $color-brand-primary;
+  padding: 0;
+
+  @include breakpoint(small) {
+
+    padding: 0;
+
+  }
+
+  @include breakpoint(medium) {
+
+    padding-top: 0;
+    padding-bottom: 0;
+
+  }
+
 
   @include breakpoint(to-small) {
-
-    background-color: $color-brand-tertiary;
-
-
 
     &.toggled-on .menu {
 
@@ -148,8 +171,6 @@
 
   @include breakpoint(to-small) {
 
-    border-top: 1px solid rgba(255,255,255,.2);
-
     display: none;
 
     .toggled-on & {
@@ -169,9 +190,11 @@
   margin: 0;
   display: block;
 
-  font-family: $font-headline;
+  flex-grow: 1;
+
+  font-family: $font-body;
   font-size: ms(0);
-  font-weight: $bold;
+  font-weight: $regular;
   text-align: left;
 
   @include breakpoint(small) {
@@ -190,8 +213,8 @@
 .menu-item a {
 
   display: block;
-  color: $color-link;
-  padding: $unit-xs $unit-s;
+  color: #fff;
+  padding: $unit-xs;
 
   text-decoration: none;
   transition: all .1s ease;
@@ -201,20 +224,20 @@
   &:focus,
   &.focus {
 
-    color: $color-text-strong-invert;
-    background-color: $color-link-hover;
+    color: $color-brand-primary;
+    background-color: #fff;
 
   }
 
   @include breakpoint(medium) {
 
-    padding: $unit-s $unit-m;
+    padding: $unit-s;
 
   }
 
   @include breakpoint(large) {
 
-    padding: $unit-m $unit-l;
+    padding: $unit-m;
 
   }
 
@@ -222,7 +245,7 @@
 
 .current-menu-item > a {
 
-  color: $color-text-strong-invert;
+  color: #fff;
   background-color: $color-link;
 
 }
@@ -232,8 +255,6 @@
  */
 
 .menu-item-has-children {
-
-  background-color: rgba($color-brand-tertiary, .6);
 
   .dropdown-toggle {
 
@@ -258,7 +279,7 @@
 
         vertical-align: middle;
 
-        border-top-color: $color-link;
+        border-top-color: #fff;
 
         content: "";
 
@@ -277,12 +298,12 @@
     &:hover > a,
     &.focus > a {
 
-      color: $color-text-strong-invert;
+      color: #fff;
       background-color: $color-link;
 
       &:after {
 
-        border-top-color: $color-text-strong-invert;
+        border-top-color: #fff;
 
       }
 
@@ -297,7 +318,7 @@
 
     &.current-menu-item > a:after {
 
-      border-top-color: $color-text-strong-invert;
+      border-top-color: #fff;
 
     }
 
@@ -355,7 +376,7 @@
 
       width: 100%;
       margin: 0;
-      border-top: 1px solid rgba(255,255,255,.2);
+      border-top: 1px solid #fff;
 
       text-align: left;
 
@@ -365,7 +386,7 @@
 
       padding: rem(10) $unit-s;
 
-      color: $color-text-invert;
+      color: #fff;
 
     }
 
