@@ -28,6 +28,28 @@ gulp.task('browserSync', function() {
   })
 })
 
+// Start browserSync server proxying live site
+gulp.task('browserSyncLive', function() {
+    browserSync({
+        proxy: 'https://2019.vienna.wordcamp.org/',
+        serveStatic: ['build/assets/stylesheets'],
+        rewriteRules: [
+            {
+                match: /\?custom-css=b51a0b2c7b/g,
+                fn: function() {
+                    return '/style.css';
+                }
+            },
+            {
+                match: /wp-admin\/admin-ajax.php\?action=wordcamp_remote_css&#038;ver=\d{4,}/g,
+                fn: function() {
+                    return '/style.css';
+                }
+            }
+        ]
+    })
+})
+
 // Start stylesheets task
 gulp.task('stylesheets', function() {
   gulp.src('source/assets/stylesheets/*.scss') // Get all *.scss files
@@ -59,6 +81,15 @@ gulp.task('default', ['browserSync', 'stylesheets', 'images', 'kss'], function()
   gulp.watch('source/**', ['kss']); // Watch for style guide changes
   gulp.watch('build/**.html', browserSync.reload);
   gulp.watch('styleguide/**.html', browserSync.reload);
+});
+
+// Start watch groups of tasks
+gulp.task('watchLive', ['browserSyncLive', 'stylesheets', 'images', 'kss'], function() {
+    gulp.watch('source/assets/stylesheets/**/*.scss', ['stylesheets']); // Watch for SCSS changes
+    gulp.watch('source/assets/images/**/*', ['images']); // Watch for image changes
+    gulp.watch('source/**', ['kss']); // Watch for style guide changes
+    gulp.watch('build/**.html', browserSync.reload);
+    gulp.watch('styleguide/**.html', browserSync.reload);
 });
 
 // Start build task
