@@ -21,6 +21,24 @@
               #{$site-hero-pattern-width/2} #{$site-hero-pattern-height/2} / #{$site-hero-pattern-width} #{$site-hero-pattern-height} #{$site-hero-pattern},
               #fff;
 
+  @include breakpoint(medium) {
+
+    background: 0 0                                                          / 100% 100% linear-gradient(to bottom, $color-brand-primary #{$site-hero-pattern-height*1.5}, transparent 0),
+                50% 30%                                                      / auto 68% #{$site-hero-path-small} no-repeat,
+                0 0                                                          / #{$site-hero-pattern-width} #{$site-hero-pattern-height} #{$site-hero-pattern},
+                #{$site-hero-pattern-width/2} #{$site-hero-pattern-height/2} / #{$site-hero-pattern-width} #{$site-hero-pattern-height} #{$site-hero-pattern},
+                #fff;
+
+  }
+
+  @include breakpoint(large) {
+    background: 0 0                                                          / 100% 100% linear-gradient(to bottom, $color-brand-primary #{$site-hero-pattern-height*1.5}, transparent 0),
+                center                                                       / auto 100% #{$site-hero-path-large} no-repeat,
+                0 0                                                          / #{$site-hero-pattern-width} #{$site-hero-pattern-height} #{$site-hero-pattern},
+                #{$site-hero-pattern-width/2} #{$site-hero-pattern-height/2} / #{$site-hero-pattern-width} #{$site-hero-pattern-height} #{$site-hero-pattern},
+                #fff;
+  }
+
   > * {
 
     position: relative;
