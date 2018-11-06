@@ -8,7 +8,7 @@ body {
   font-family: $font-body;
 
   color: $color-text;
-  background: #fff;
+  background: $color-brand-primary;
 
   @include font-feature-settings("liga");
 

@@ -28,7 +28,9 @@
 
 #main {
 
+  background-color: #fff;
 
+  @include container-padding(1);
 
 }
 
@@ -58,7 +60,12 @@
 
 #content {
 
-  @include container-padding(1.5);
+  @include container-padding(0);
+
+  padding: 0;
+
+  position: relative;
+  z-index: $z-index-main;
 
 }
 

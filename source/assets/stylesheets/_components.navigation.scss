@@ -103,7 +103,7 @@
  */
 
 
-.menu-main-navigation-container {
+#primary-menu {
 
   max-width: $container-max-width;
   margin-left: auto;
@@ -111,13 +111,9 @@
 
   background-color: $color-brand-primary;
 
-  .menu {
-
-    @include breakpoint(small) {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
+  @include breakpoint(small) {
+    display: flex;
+    flex-wrap: wrap;
   }
 
 }
@@ -132,7 +128,8 @@
 
   @include breakpoint(small) {
 
-    padding: 0;
+    padding-top: 0;
+    padding-bottom: 0;
 
   }
 
