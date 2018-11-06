@@ -295,12 +295,12 @@
     &:hover > a,
     &.focus > a {
 
-      color: #fff;
-      background-color: $color-link;
+      color: $color-link;
+      background-color: #fff;
 
       &:after {
 
-        border-top-color: #fff;
+        border-top-color: $color-link;
 
       }
 
