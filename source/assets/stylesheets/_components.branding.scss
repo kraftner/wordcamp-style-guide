@@ -30,15 +30,20 @@ $font-size: 40px;
   border: solid $border-width $color-brand-primary;
   border-bottom: 0;
 
-  width: 400px;
+  width: 320px;
   max-width: 100%;
   margin: 0 auto;
 
   position: relative; // Add position: relative to keep the light beams from leaking out
   overflow: hidden; // Add overflow: hidden to keep light beams from leaking out
 
-
   text-align: center;
+
+  @include breakpoint(small) {
+
+    width: 400px;
+
+  }
 
   .home & {
 
@@ -52,12 +57,16 @@ $font-size: 40px;
 
   border-bottom: solid $border-width $color-brand-primary;
 
-  font-size: $font-size;
+  font-size: $font-size * $site-logo-proportion;
   line-height: $font-size + 2 * $line-gap;
   font-family: $font-headline;
   font-weight: $regular;
   text-transform: uppercase;
   color: $color-brand-primary;
+
+  @include breakpoint(small) {
+    font-size: $font-size;
+  }
 
   a {
 
@@ -90,7 +99,9 @@ $font-size: 40px;
 
     content: "";
 
-    opacity: 0.9;
+    @include breakpoint(small) {
+      background-size: $site-logo-width $site-logo-height;
+    }
 
   }
 
@@ -103,11 +114,16 @@ $font-size: 40px;
   margin: #{$ruler-height/-4} 0 #{$ruler-height/4};
   background: 0 #{$ruler-height/-2} / 100% ($font-size + 4 * $line-gap) linear-gradient(to bottom, $color-brand-primary $border-width, transparent $border-width, transparent ($border-width+$line-gap), $color-brand-primary ($border-width+$line-gap),$color-brand-primary $ruler-height,transparent $ruler-height);
 
-  font-size: $font-size;
+  font-size: $font-size * $site-logo-proportion;
   line-height: $font-size + 4 * $line-gap;
   font-family: $font-headline;
   font-weight: $regular;
   color: $color-brand-primary;
 
   font-variant: small-caps;
+
+  @include breakpoint(small) {
+    font-size: $font-size;
+  }
+
 }
