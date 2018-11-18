@@ -243,7 +243,7 @@
 .current-menu-item > a {
 
   color: #fff;
-  background-color: $color-link;
+  background-color: $color-link-hover;
 
 }
 
@@ -310,12 +310,6 @@
     &.focus > .sub-menu {
 
       left: 0;
-
-    }
-
-    &.current-menu-item > a:after {
-
-      border-top-color: #fff;
 
     }
 
