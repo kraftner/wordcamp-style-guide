@@ -199,3 +199,51 @@
   }
 
 }
+
+// Site Header Background
+//
+// Add responsive Header Background with invader pattern and figures
+//
+// Markup:
+// @include site-header-background(other);
+//
+// Style guide: 2.site-header-background
+
+@mixin site-header-background($pattern) {
+
+  $site-hero-pattern:         map-get(map-get($invader, $pattern#{_a}),url);
+  $site-hero-pattern-width:   map-get(map-get($invader, $pattern#{_a}),width);
+  $site-hero-pattern-height:  map-get(map-get($invader, $pattern#{_a}),height);
+
+  image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges;          /* Firefox                        */
+  image-rendering: -o-crisp-edges;            /* Opera                          */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+  image-rendering: pixelated; /* Chrome */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor;   /* IE8+  */
+
+  background: 0 0                                                            / 100% 100% linear-gradient(to bottom, $color-brand-primary #{$site-hero-pattern-height*1.5}, transparent 0),
+  0 0                                                                        / #{$site-hero-pattern-width} #{$site-hero-pattern-height} #{$site-hero-pattern},
+  #{floor($site-hero-pattern-width/2)} #{floor($site-hero-pattern-height/2)} / #{$site-hero-pattern-width} #{$site-hero-pattern-height} #{$site-hero-pattern},
+  #fff;
+
+  @include breakpoint(medium) {
+
+    background: 0 0                                                            / 100% 100% linear-gradient(to bottom, $color-brand-primary #{$site-hero-pattern-height*1.5}, transparent 0),
+    50% 75px                                                                   / 850px 440px #{$site-hero-path-small} no-repeat,
+    0 0                                                                        / #{$site-hero-pattern-width} #{$site-hero-pattern-height} #{$site-hero-pattern},
+    #{floor($site-hero-pattern-width/2)} #{floor($site-hero-pattern-height/2)} / #{$site-hero-pattern-width} #{$site-hero-pattern-height} #{$site-hero-pattern},
+    #fff;
+
+  }
+
+  @include breakpoint(large) {
+    background: 0 0                                                            / 100% 100% linear-gradient(to bottom, $color-brand-primary #{$site-hero-pattern-height*1.5}, transparent 0),
+    50% bottom                                                                 / 1191px 655px #{$site-hero-path-large} no-repeat,
+    0 0                                                                        / #{$site-hero-pattern-width} #{$site-hero-pattern-height} #{$site-hero-pattern},
+    #{floor($site-hero-pattern-width/2)} #{floor($site-hero-pattern-height/2)} / #{$site-hero-pattern-width} #{$site-hero-pattern-height} #{$site-hero-pattern},
+    #fff;
+  }
+
+}

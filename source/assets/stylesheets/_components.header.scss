@@ -16,28 +16,7 @@
   padding-bottom: $container-unit-large * 2.5;
   margin-bottom:  $container-unit-large * -2.5;
 
-  background: 0 0                                                          / 100% 100% linear-gradient(to bottom, $color-brand-primary #{$site-hero-pattern-height*1.5}, transparent 0),
-              0 0                                                          / #{$site-hero-pattern-width} #{$site-hero-pattern-height} #{$site-hero-pattern},
-              #{$site-hero-pattern-width/2} #{$site-hero-pattern-height/2} / #{$site-hero-pattern-width} #{$site-hero-pattern-height} #{$site-hero-pattern},
-              #fff;
-
-  @include breakpoint(medium) {
-
-    background: 0 0                                                          / 100% 100% linear-gradient(to bottom, $color-brand-primary #{$site-hero-pattern-height*1.5}, transparent 0),
-                50% 75px                                                     / 850px 440px #{$site-hero-path-small} no-repeat,
-                0 0                                                          / #{$site-hero-pattern-width} #{$site-hero-pattern-height} #{$site-hero-pattern},
-                #{$site-hero-pattern-width/2} #{$site-hero-pattern-height/2} / #{$site-hero-pattern-width} #{$site-hero-pattern-height} #{$site-hero-pattern},
-                #fff;
-
-  }
-
-  @include breakpoint(large) {
-    background: 0 0                                                          / 100% 100% linear-gradient(to bottom, $color-brand-primary #{$site-hero-pattern-height*1.5}, transparent 0),
-                50% bottom                                                   / 1191px 655px #{$site-hero-path-large} no-repeat,
-                0 0                                                          / #{$site-hero-pattern-width} #{$site-hero-pattern-height} #{$site-hero-pattern},
-                #{$site-hero-pattern-width/2} #{$site-hero-pattern-height/2} / #{$site-hero-pattern-width} #{$site-hero-pattern-height} #{$site-hero-pattern},
-                #fff;
-  }
+  @include site-header-background(other);
 
   > * {
 

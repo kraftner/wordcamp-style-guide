@@ -32,7 +32,7 @@ gulp.task('browserSync', function() {
 gulp.task('browserSyncLive', function() {
     browserSync({
         proxy: 'https://2019.vienna.wordcamp.org/',
-        serveStatic: ['build/assets/stylesheets'],
+        serveStatic: ['build/assets/stylesheets', 'build/assets/images'],
         rewriteRules: [
             {
                 match: /\?custom-css=b51a0b2c7b/g,
