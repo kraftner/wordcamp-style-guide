@@ -335,16 +335,16 @@
 
       padding-left: rem(40);
 
-      background-image: $image-bullet-color;
+      background-image: $image-bullet-light;
       background-repeat: no-repeat;
-      background-size: 12px;
+      background-size: 8px;
       background-position: $unit-s 50%;
 
       &:hover,
       &:focus,
       &.focus {
 
-        background-image: $image-bullet-dark;
+        background-image: $image-bullet-color;
 
       }
 
